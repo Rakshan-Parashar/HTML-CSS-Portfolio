@@ -1,0 +1,144 @@
+body {
+    background-color: #1E2025;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 60px;
+    column-gap: 140px;
+}
+
+.link {
+    width: 100px;
+    height: 100px;
+    background-color: #FFFFFF;
+    display: grid;
+    place-items: center;
+    transform: rotate(-30deg) skew(25deg) translate(0, 0);
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s all ease-in-out;
+}
+
+.link:hover {
+    transform: rotate(-30deg) skew(25deg) translate(10px, -10px);
+    box-shadow: -20px 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.link.linkedln:hover {
+    background-color: rgb(46, 46, 194);
+}
+
+.link.instagram:hover {
+    background-color: rgb(206, 48, 48);
+}
+
+.link.twitter:hover {
+    background-color: rgba(27, 3, 83, 0.623);
+}
+
+.link.github:hover {
+    background-color: rgb(36, 34, 34);
+}
+
+.link img {
+    width: 50px;
+    height: 50px;
+    transition: 0.3s all ease-in-out;
+    fill: #292929;
+}
+
+.link:hover img {
+    fill: #fff;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font-family: "Neuton", serif;
+}
+
+p {
+    background-color: #29334d;
+    border-radius: 10px;
+    width: 20%;
+    height: 100px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 20px;
+    border-style: solid;
+    border-color: black;
+    color: #fff;
+    font-family: "Roboto", serif;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+}
+
+span {
+    color: #ADEBFF;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        row-gap: 40px;
+    }
+
+    .link {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        width: 40%;
+        height: 80px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        grid-template-columns: 1fr; 
+        column-gap: 20px;
+        row-gap: 30px;
+    }
+
+    .link {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        width: 70%;
+        height: 70px;
+        font-size: 16px;
+    }
+}
